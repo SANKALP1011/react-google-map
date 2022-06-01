@@ -1,9 +1,10 @@
 import React from "react";
+import Map from "./Componenst/Map";
 
 function App() {
   return (
     <div className="App">
-    <h1>gjhgj</h1>
+      <Map/>
     </div>
   );
 }
