@@ -1,14 +1,13 @@
 /* This is the css files for all the buttons that might be used -: */
 .BlueButton{
    background-color: #1B31A8;
-   width: 10%;
+   width: 25%;
    height: 6vh;
    border-radius: 85px;
    text-align: center;
+   margin-top: 15%;
+   margin-left: 70%;
 }
 h3{
     color: white;
-}
-.Content{
-   display: table-column;
 }

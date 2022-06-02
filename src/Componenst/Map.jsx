@@ -8,6 +8,7 @@ import {
     DirectionsRenderer,
   } from '@react-google-maps/api'
 import { useState , useRef } from "react";
+import { BlueButton } from "./BlueButton";
 
 export const Map = () =>{
     const {isLoaded} = useJsApiLoader({
@@ -49,9 +50,12 @@ export const Map = () =>{
     return <>
          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
            <div className="Content">
-           <input className="TextField1" type="text" placeholder="oroigin" ref={StartDestination}/>
+             <div className="TextFieldBox">
+             <input className="TextField1" type="text" placeholder="oroigin" ref={StartDestination}/>
              <input className="TextField2" type="text" placeholder="desti" ref={EndDestination}/>
-             <button onClick={CalculateDistance} type="submit">Search</button>
+             </div>
+             <BlueButton handler={CalculateDistance} label={<h3>Show</h3>}/>
+             
            </div>
                <GoogleMap
                   zoom={15}

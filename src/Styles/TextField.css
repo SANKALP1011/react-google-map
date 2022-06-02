@@ -1,12 +1,26 @@
+.TextFieldBox{
+    display: table-row;
+}
 .TextField1{
-    width: 30%;
-    height: 20%;
-    margin: 5% 1% 0 1%;
+    width: 20%;
+    height: 5%;
+    margin: 5% auto;
+    position: fixed;
+    border-radius: 10px;
+}
+.TextField2{
+    position: fixed;
+    width: 20%;
+    height: 5%;
+    margin: 10% auto;
+    border-radius: 10px;
 }
 
 .TextField1::placeholder{
     background-color: white;
+    text-align: center;
 }
 .TextField2::placeholder{
     background-color: white;
+    text-align: center;
 }
