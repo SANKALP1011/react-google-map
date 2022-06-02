@@ -1,0 +1,12 @@
+.TextField1{
+    width: 30%;
+    height: 20%;
+    margin: 5% 1% 0 1%;
+}
+
+.TextField1::placeholder{
+    background-color: white;
+}
+.TextField2::placeholder{
+    background-color: white;
+}

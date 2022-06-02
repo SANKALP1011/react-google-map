@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import "../src/Styles/index.css";
 import App from './App';
 import "../src/Styles/MapBox.css";
+import "../src/Styles/Buttons.css";
+import "../src/Styles/TextField.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
