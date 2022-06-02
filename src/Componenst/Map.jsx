@@ -47,7 +47,12 @@ export const Map = () =>{
     }
 
     return <>
-         <div>
+         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
+           <div className="Content">
+           <input type="text" placeholder="oroigin" ref={StartDestination}/>
+             <input type="text" placeholder="desti" ref={EndDestination}/>
+             <button onClick={CalculateDistance} type="submit">Search</button>
+           </div>
                <GoogleMap
                   zoom={15}
                   center={center}
@@ -64,9 +69,7 @@ export const Map = () =>{
             <DirectionsRenderer directions={Route} />
           )}
         </GoogleMap>
-             <input type="text" placeholder="oroigin" ref={StartDestination}/>
-             <input type="text" placeholder="desti" ref={EndDestination}/>
-             <button onClick={CalculateDistance} type="submit">Search</button>
+
          </div>
     
     </>
