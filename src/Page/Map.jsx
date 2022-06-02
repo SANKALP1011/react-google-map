@@ -4,15 +4,18 @@ import {
     useJsApiLoader,
     GoogleMap,
     Marker,
-    Autocomplete,
     DirectionsRenderer,
   } from '@react-google-maps/api'
 import { useState , useRef } from "react";
-import { BlueButton } from "./BlueButton";
+import {BlueButton} from "../Componenst/BlueButton"
+import { TopBar } from "../Componenst/TopBar";
+import {DistanceBox} from "../Componenst/DistanceBox";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export const Map = () =>{
     const {isLoaded} = useJsApiLoader({
-        googleMapsApiKey: process.env.GOOGLE_MAP_API_KEY,
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
         location: ['places']
     })
 
@@ -22,12 +25,14 @@ export const Map = () =>{
     const [Route,setRoute] = useState(null);
     const [distance,setDistance] = useState('');
     const [timetoReach,settimetoReach] = useState('');
+    
+    const [distanceBox,setDistanceBox] = useState(false);
 
-    const StartDestination = useRef();
-    const EndDestination = useRef();
+    const StartDestination = useRef(null);
+    const EndDestination = useRef(null);
 
     if(!isLoaded){
-        return<div>..nkhj </div>
+        return<div> There was an error while loading the map. </div>
         
     }
 
@@ -44,18 +49,20 @@ export const Map = () =>{
       setRoute(Results);
       setDistance(Results.routes[0].legs[0].distance.text)
       settimetoReach(Results.routes[0].legs[0].duration.text);
-      console.log("chkjhkj")
     }
 
     return <>
+    <TopBar/>
          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
            <div className="Content">
-             <div className="TextFieldBox">
-             <input className="TextField1" type="text" placeholder="oroigin" ref={StartDestination}/>
-             <input className="TextField2" type="text" placeholder="desti" ref={EndDestination}/>
-             </div>
-             <BlueButton handler={CalculateDistance} label={<h3>Show</h3>}/>
-             
+             <div className="InputDiv">
+               <div className="TextFieldBox">
+               <input className="TextField1 shadow-md" type="text" placeholder="Origin" ref={StartDestination}/>
+                    <input className="TextField2 shadow-md" type="text" placeholder="Destination" ref={EndDestination}/>
+                 </div>
+                 <BlueButton handler={()=>{CalculateDistance(); setDistanceBox(true)}} label={<h3>Calculate</h3>}/>
+              </div>
+              {distanceBox === true && <DistanceBox distance={distance} duration={timetoReach}/>}
            </div>
                <GoogleMap
                   zoom={15}

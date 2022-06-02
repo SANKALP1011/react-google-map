@@ -1,0 +1,43 @@
+.DistanceDiv{
+    height: 30%;
+    width: 50%;
+    margin: 25% 2% 0 1%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.TopDiv{
+    display: flex;
+    background-color: white;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+.BottomDiv{
+    background-color: #F4F8FA;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+}
+.DistanceText{
+    color: black;
+    opacity: 0.5;
+    margin: 3% 0 0 2%;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.DistanceNumberText{
+    color: #0179FF;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 1% 0 0 25%;
+    padding: 2% 2% 2% 10%;
+   
+}
+.DurationText{
+    font-size: 13px;
+    color: black;
+    opacity: 0.5;
+    margin: 3% auto;
+}
+

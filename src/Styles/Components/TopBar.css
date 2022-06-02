@@ -1,0 +1,11 @@
+.TopBar{
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+  background-color: white;
+    display: flex;
+}
+.Logo{
+    height: 9vh;
+    width: 15%;
+}
