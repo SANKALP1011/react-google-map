@@ -1,0 +1,10 @@
+.HeaderBlock{
+    margin:1%;
+    text-align: center;
+}
+.HeaderText{
+    color: #1B31A8;
+    font-size: 20px;
+    font-weight: bolder;
+    opacity: 0.9;
+}

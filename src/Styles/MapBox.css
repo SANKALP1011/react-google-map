@@ -1,12 +1,12 @@
 .MapBox{
     height: 50vh;
     width: 70%;
-    margin: 30% 20% 0 15%;
+    margin: 20% 20% 0 15%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 input::placeholder{
     background-color: cadetblue;
 }
 .Content{
-    margin: 24% 0 0 11%;
+    margin: 15% 0 0 11%;
 }

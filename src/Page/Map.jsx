@@ -10,8 +10,7 @@ import { useState , useRef } from "react";
 import {BlueButton} from "../Componenst/BlueButton"
 import { TopBar } from "../Componenst/TopBar";
 import {DistanceBox} from "../Componenst/DistanceBox";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { Header } from "../Componenst/Header";
 
 export const Map = () =>{
     const {isLoaded} = useJsApiLoader({
@@ -53,6 +52,7 @@ export const Map = () =>{
 
     return <>
     <TopBar/>
+    <Header text={<h2>Let's calculate distance from google maps.</h2>}/>
          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
            <div className="Content">
              <div className="InputDiv">
