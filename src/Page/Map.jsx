@@ -20,7 +20,6 @@ export const Map = () =>{
 
     const center = { lat: 28.7041, lng: 77.1025}
 
-    const [map,setMap] = useState((null));
     const [Route,setRoute] = useState(null);
     const [distance,setDistance] = useState('');
     const [timetoReach,settimetoReach] = useState('');
@@ -56,9 +55,11 @@ export const Map = () =>{
          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
            <div className="Content">
              <div className="InputDiv">
-               <div className="TextFieldBox">
-               <input className="TextField1 shadow-md" type="text" placeholder="Origin" ref={StartDestination}/>
-                    <input className="TextField2 shadow-md" type="text" placeholder="Destination" ref={EndDestination}/>
+               <div className="TextFieldBox"> 
+               <label for="origin">Origin</label>
+               <input className="TextField1 shadow-md" name="origin" type="text" placeholder="Origin" ref={StartDestination}/>
+               <label className="DestinationLabel" for="destination">Destination</label>
+                    <input name="destination" className="TextField2 shadow-md" type="text" placeholder="Destination" ref={EndDestination}/>
                  </div>
                  <BlueButton handler={()=>{CalculateDistance(); setDistanceBox(true)}} label={<h3>Calculate</h3>}/>
               </div>
@@ -80,8 +81,7 @@ export const Map = () =>{
             <DirectionsRenderer directions={Route} />
           )}
         </GoogleMap>
-
-         </div>
+  </div>
     
     </>
 };

@@ -4,7 +4,7 @@
 .TextField1{
     width: 20%;
     height: 6%;
-    margin: 5% auto;
+    margin: 2% auto;
     position: fixed;
     border-radius: 10px;
     text-align: center;
@@ -27,4 +27,12 @@
 }
 .icon{
     position: relative;
+}
+label{
+    position: fixed;
+    opacity: 0.5;
+}
+.DestinationLabel{
+    margin-top: 10%;
+    opacity: 0.5;
 }
