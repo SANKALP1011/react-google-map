@@ -51,7 +51,7 @@ export const Map = () =>{
 
     return <>
     <TopBar/>
-    <Header text={<h2>Let's calculate distance from google maps.</h2>}/>
+    <Header text={<h2>Let's calculate <span>distance</span> from google maps.</h2>}/>
          <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
            <div className="Content">
              <div className="InputDiv">
